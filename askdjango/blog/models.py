@@ -10,4 +10,5 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True) # 최초만
     updated_at = models.DateTimeField(auto_now=True)     # 업데이트 마다 자동저장
 
-
+    tags = models.CharField(max_length=100, blank=True)
+    lnglat = models.CharField(max_length=50, blank=True, help_text='위도/경도 포맷으로 입력')
